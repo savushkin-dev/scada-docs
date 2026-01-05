@@ -1,7 +1,7 @@
 
 ```mermaid
 graph TD
-    subgraph "Контроллеры, сторонние системы"
+    subgraph "Контроллеры, другие SCADA"
         C1["PAC"]
         C2["PAC"]
         C3["PAC"]
@@ -22,18 +22,15 @@ graph TD
             Mc2["WebClient"]
             Mc3["WebClient"]
             Mc4["WebClient"]
+            MobSrv["Mobile Srv"]
+            Mob1["MobClient"]
+            Mob2["MobCient"]
         end
 
         subgraph "Режим редактора"
             ESrv["Editor Srv <br/> AI Designer"]
             Ec1["EWebClient"]
             Ec2["EWebClient"]
-        end
-
-        subgraph "Мобильная система"
-            MobSrv["Mobile Srv"]
-            Mob1["MobClient"]
-            Mob2["MobCient"]
         end
 
     subgraph "Инфраструктура и данные"
