@@ -1,7 +1,7 @@
 
 ```mermaid
 graph TD
-    subgraph "Контроллеры, другие SCADA"
+    subgraph "Контроллеры, SCADA"
         C1["PAC"]
         C2["PAC"]
         C3["PAC"]
@@ -34,10 +34,10 @@ graph TD
         end
 
     subgraph "Инфраструктура и данные"
-        direction LR
-        Kafka([Kafka])
-        Postgres[(Postgres)]
+%%        direction LR
+        Postgres[(Postgresql)]
         Redis[(Redis)]
+        Kafka([Kafka])
     end
 
     %% --- Соединения ---
@@ -54,7 +54,9 @@ graph TD
     Kafka --> MSrv1
     Kafka --> MSrv2
     Kafka --> MobSrv
-    Kafka --> ESrv
+    Postgres --> ESrv
+    Redis --> ESrv
+
 
     %%    Postgres --> MSrv1
     %%    Postgres --> MSrv2
