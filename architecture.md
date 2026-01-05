@@ -57,12 +57,14 @@ graph TD
     Kafka --> MSrv1
     Kafka --> MSrv2
     Kafka --> MobSrv
-    Postgres --> MSrv1
-    Postgres --> MSrv2
-    Postgres --> MobSrv
-    Redis --> MSrv1
-    Redis --> MSrv2
-    Redis --> MobSrv
+    Kafka --> ESrv
+
+    %%    Postgres --> MSrv1
+    %%    Postgres --> MSrv2
+    %%    Postgres --> MobSrv
+    %%    Redis --> MSrv1
+    %%    Redis --> MSrv2
+    %%    Redis --> MobSrv
 
 
     %% Сервисы мониторинга -> Mc
